@@ -7,7 +7,8 @@ OpenNMS configuration for Acme Packet devices.
 .Download and install from GitHub
 [source, bash]
 ----
-cd $OPENNMS_HOME/etc/modules-available
+mkdir ${HOME}/opennms-config-workspace
+cd ${HOME}/opennms-config-workspace
 git clone https://github.com/opennms-config-modules/acmepacket.git
 ----
 
@@ -16,8 +17,7 @@ git clone https://github.com/opennms-config-modules/acmepacket.git
 .Install datacollection configuration
 [source, bash]
 ----
-cd $OPENNMS_HOME/etc/datacollection
-ln -s ../modules-available/acmepacket/datacollection/*.xml .
+cp ${HOME}/opennms-config-workspace/acmepacket/datacollection/*.xml ${OPENNMS_HOME}/etc/datacollection
 ----
 
 .Include in datacollection-config.xml
@@ -31,12 +31,5 @@ ln -s ../modules-available/acmepacket/datacollection/*.xml .
 .Install graph report definitions
 [source, bash]
 ----
-cd $OPENNMS_HOME/etc/snmp-graph.properties.d
-ln -s ../modules-available/acmepacket/graphs/*.properties .
+cp ${HOME}/opennms-config-workspace/acmepacket/graphs/*.properties ${OPENNMS_HOME}/etc/snmp-graph.properties.d
 ----
-
-# License & Authors
-
-- Author:: Ronny Trommer (<ronny@opennms.org>)
-
-Licensed under the GNU Affero General Public License 3+. You may obtain a copy of the License at http://www.gnu.org/licenses/agpl-3.0.html.

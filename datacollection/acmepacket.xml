@@ -48,5 +48,4 @@
             <includeGroup>acmepacket</includeGroup>
         </collect>
     </systemDef>
-
 </datacollection-group>
