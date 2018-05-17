@@ -1,8 +1,8 @@
-# Acme Packet
+= Acme Packet
 
 OpenNMS configuration for Acme Packet devices.
 
-## Installation
+== Installation
 
 .Download and install from GitHub
 [source, bash]
@@ -12,7 +12,7 @@ cd ${HOME}/opennms-config-workspace
 git clone https://github.com/opennms-config-modules/acmepacket.git
 ----
 
-### Datacollection
+=== Data Collection
 
 .Install datacollection configuration
 [source, bash]
@@ -26,7 +26,7 @@ cp ${HOME}/opennms-config-workspace/acmepacket/datacollection/*.xml ${OPENNMS_HO
 <include-collection dataCollectionGroup="Acme Packet"/>
 ----
 
-### Graph report definitions
+=== Graph Report Definitions
 
 .Install graph report definitions
 [source, bash]
